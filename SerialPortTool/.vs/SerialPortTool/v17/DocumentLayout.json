@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Work\\Egyeb\\SerialPortTool\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|c:\\work\\egyeb\\serialporttool\\serialporttool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|C:\\Work\\Egyeb\\SerialPortTool\\serialporttool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|C:\\Work\\Egyeb\\SerialPortTool\\serialporttool\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|C:\\Work\\Egyeb\\SerialPortTool\\serialporttool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\Form1.cs",
+              "ToolTip": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.cs",
+              "RelativeToolTip": "SerialPortTool\\Form1.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAgwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T10:17:23.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\Form1.Designer.cs",
+              "ToolTip": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.Designer.cs",
+              "RelativeToolTip": "SerialPortTool\\Form1.Designer.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwEwAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T10:14:28.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Program.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\Program.cs",
+              "ToolTip": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Program.cs",
+              "RelativeToolTip": "SerialPortTool\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T10:14:23.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\Form1.cs",
+              "ToolTip": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.cs [Design]",
+              "RelativeToolTip": "SerialPortTool\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T09:59:59.704Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

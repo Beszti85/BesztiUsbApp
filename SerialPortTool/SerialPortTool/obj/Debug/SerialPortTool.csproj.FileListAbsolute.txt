@@ -1,0 +1,10 @@
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\bin\Debug\SerialPortTool.exe.config
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\bin\Debug\SerialPortTool.exe
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\bin\Debug\SerialPortTool.pdb
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.AssemblyReference.cache
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.Form1.resources
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.Properties.Resources.resources
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.GenerateResource.cache
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.CoreCompileInputs.cache
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.exe
+C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.pdb
