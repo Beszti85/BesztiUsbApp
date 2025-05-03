@@ -8,3 +8,14 @@ C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.Gene
 C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.CoreCompileInputs.cache
 C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.exe
 C:\Work\Egyeb\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.pdb
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\bin\Debug\SerialPortTool.exe.config
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\bin\Debug\SerialPortTool.exe
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\bin\Debug\SerialPortTool.pdb
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.AssemblyReference.cache
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.SuggestedBindingRedirects.cache
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.Form1.resources
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.Properties.Resources.resources
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.GenerateResource.cache
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.csproj.CoreCompileInputs.cache
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.exe
+D:\Munka\VisualStudio\BesztiUsbApp\SerialPortTool\SerialPortTool\obj\Debug\SerialPortTool.pdb
