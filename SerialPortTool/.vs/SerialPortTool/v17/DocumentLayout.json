@@ -1,22 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Work\\Egyeb\\SerialPortTool\\",
+  "WorkspaceRootPath": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|c:\\work\\egyeb\\serialporttool\\serialporttool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\serialporttool\\cmdhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\cmdhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|C:\\Work\\Egyeb\\SerialPortTool\\serialporttool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\serialporttool\\serialprotocol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\serialprotocol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|C:\\Work\\Egyeb\\SerialPortTool\\serialporttool\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|d:\\munka\\visualstudio\\besztiusbapp\\serialporttool\\serialporttool\\pcserialtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\pcserialtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|C:\\Work\\Egyeb\\SerialPortTool\\serialporttool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\serialporttool\\pcserialtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\pcserialtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\serialporttool\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\serialporttool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\serialporttool\\pcserialtool.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A23E9B-A9A0-4668-9E8F-EA11DDDF7A17}|SerialPortTool\\SerialPortTool.csproj|solutionrelative:serialporttool\\pcserialtool.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,54 +42,91 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.cs",
-              "RelativeDocumentMoniker": "SerialPortTool\\Form1.cs",
-              "ToolTip": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.cs",
-              "RelativeToolTip": "SerialPortTool\\Form1.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAgwFYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "PcSerialTool.Designer.cs",
+              "DocumentMoniker": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\PcSerialTool.Designer.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\PcSerialTool.Designer.cs",
+              "ToolTip": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\PcSerialTool.Designer.cs",
+              "RelativeToolTip": "SerialPortTool\\PcSerialTool.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T10:17:23.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "SerialPortTool\\Form1.Designer.cs",
-              "ToolTip": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.Designer.cs",
-              "RelativeToolTip": "SerialPortTool\\Form1.Designer.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAwwEwAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T10:14:28.186Z",
+              "WhenOpened": "2025-12-27T21:16:50.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Program.cs",
-              "RelativeDocumentMoniker": "SerialPortTool\\Program.cs",
-              "ToolTip": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Program.cs",
-              "RelativeToolTip": "SerialPortTool\\Program.cs",
+              "Title": "PcSerialTool.cs [Design]",
+              "DocumentMoniker": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\PcSerialTool.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\PcSerialTool.cs",
+              "ToolTip": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\PcSerialTool.cs [Design]",
+              "RelativeToolTip": "SerialPortTool\\PcSerialTool.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T21:15:55.676Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "SerialPortTool\\Properties\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T10:14:23.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T21:07:41.35Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.cs",
-              "RelativeDocumentMoniker": "SerialPortTool\\Form1.cs",
-              "ToolTip": "C:\\Work\\Egyeb\\SerialPortTool\\SerialPortTool\\Form1.cs [Design]",
-              "RelativeToolTip": "SerialPortTool\\Form1.cs [Design]",
+              "Title": "CmdHandler.cs",
+              "DocumentMoniker": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\CmdHandler.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\CmdHandler.cs",
+              "ToolTip": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\CmdHandler.cs",
+              "RelativeToolTip": "SerialPortTool\\CmdHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T09:59:59.704Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-22T04:11:41.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PcSerialTool.cs",
+              "DocumentMoniker": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\PcSerialTool.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\PcSerialTool.cs",
+              "ToolTip": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\PcSerialTool.cs",
+              "RelativeToolTip": "SerialPortTool\\PcSerialTool.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwFIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T12:27:15.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SerialProtocol.cs",
+              "DocumentMoniker": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\SerialProtocol.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\SerialProtocol.cs",
+              "ToolTip": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\SerialProtocol.cs",
+              "RelativeToolTip": "SerialPortTool\\SerialProtocol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T10:39:24.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\Program.cs",
+              "RelativeDocumentMoniker": "SerialPortTool\\Program.cs",
+              "ToolTip": "D:\\Munka\\VisualStudio\\BesztiUsbApp\\SerialPortTool\\SerialPortTool\\Program.cs",
+              "RelativeToolTip": "SerialPortTool\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T10:14:23.538Z"
             }
           ]
         }
