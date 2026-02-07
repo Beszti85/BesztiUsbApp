@@ -35,11 +35,16 @@
             this.btnReadHum = new System.Windows.Forms.Button();
             this.tbTemperature = new System.Windows.Forms.TextBox();
             this.tbHumidity = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btFlashId = new System.Windows.Forms.Button();
+            this.tbFlashType = new System.Windows.Forms.TextBox();
             this.ReadADC = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.InfoBox = new System.Windows.Forms.TextBox();
+            this.Led_PWM = new System.Windows.Forms.TrackBar();
+            this.LedPwmCtrl = new System.Windows.Forms.CheckBox();
+            this.LedPwmRead = new System.Windows.Forms.Button();
+            this.tbLedPwm = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Led_PWM)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRefresh
@@ -107,26 +112,26 @@
             this.tbHumidity.TabIndex = 7;
             this.tbHumidity.TextChanged += new System.EventHandler(this.tbHumidity_TextChanged);
             // 
-            // button1
+            // btFlashId
             // 
-            this.button1.Location = new System.Drawing.Point(27, 168);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "FlashId";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btFlashId.Location = new System.Drawing.Point(27, 168);
+            this.btFlashId.Name = "btFlashId";
+            this.btFlashId.Size = new System.Drawing.Size(75, 23);
+            this.btFlashId.TabIndex = 8;
+            this.btFlashId.Text = "FlashId";
+            this.btFlashId.UseVisualStyleBackColor = true;
+            this.btFlashId.Click += new System.EventHandler(this.btFlashId_Click);
             // 
-            // textBox1
+            // tbFlashType
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 168);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
+            this.tbFlashType.Location = new System.Drawing.Point(129, 168);
+            this.tbFlashType.Name = "tbFlashType";
+            this.tbFlashType.Size = new System.Drawing.Size(100, 20);
+            this.tbFlashType.TabIndex = 9;
             // 
             // ReadADC
             // 
-            this.ReadADC.Location = new System.Drawing.Point(27, 207);
+            this.ReadADC.Location = new System.Drawing.Point(27, 197);
             this.ReadADC.Name = "ReadADC";
             this.ReadADC.Size = new System.Drawing.Size(75, 23);
             this.ReadADC.TabIndex = 10;
@@ -136,7 +141,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 209);
+            this.textBox2.Location = new System.Drawing.Point(129, 197);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 11;
@@ -149,16 +154,58 @@
             this.InfoBox.TabIndex = 12;
             this.InfoBox.TextChanged += new System.EventHandler(this.InfoBox_TextChanged);
             // 
+            // Led_PWM
+            // 
+            this.Led_PWM.Location = new System.Drawing.Point(362, 226);
+            this.Led_PWM.Name = "Led_PWM";
+            this.Led_PWM.Size = new System.Drawing.Size(104, 45);
+            this.Led_PWM.TabIndex = 13;
+            this.Led_PWM.Scroll += new System.EventHandler(this.Led_PWM_Scroll);
+            // 
+            // LedPwmCtrl
+            // 
+            this.LedPwmCtrl.AutoSize = true;
+            this.LedPwmCtrl.Location = new System.Drawing.Point(257, 226);
+            this.LedPwmCtrl.Name = "LedPwmCtrl";
+            this.LedPwmCtrl.Size = new System.Drawing.Size(82, 17);
+            this.LedPwmCtrl.TabIndex = 14;
+            this.LedPwmCtrl.Text = "LedPwmCtrl";
+            this.LedPwmCtrl.UseVisualStyleBackColor = true;
+            this.LedPwmCtrl.CheckedChanged += new System.EventHandler(this.LedPwmCtrl_CheckedChanged);
+            // 
+            // LedPwmRead
+            // 
+            this.LedPwmRead.AutoEllipsis = true;
+            this.LedPwmRead.Location = new System.Drawing.Point(27, 226);
+            this.LedPwmRead.Name = "LedPwmRead";
+            this.LedPwmRead.Size = new System.Drawing.Size(75, 23);
+            this.LedPwmRead.TabIndex = 15;
+            this.LedPwmRead.Text = "Led PWM";
+            this.LedPwmRead.UseVisualStyleBackColor = true;
+            this.LedPwmRead.Click += new System.EventHandler(this.LedPwmRead_Click);
+            // 
+            // tbLedPwm
+            // 
+            this.tbLedPwm.Location = new System.Drawing.Point(129, 226);
+            this.tbLedPwm.Name = "tbLedPwm";
+            this.tbLedPwm.Size = new System.Drawing.Size(100, 20);
+            this.tbLedPwm.TabIndex = 16;
+            this.tbLedPwm.TextChanged += new System.EventHandler(this.tbLedPwm_TextChanged);
+            // 
             // PcSerialTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbLedPwm);
+            this.Controls.Add(this.LedPwmRead);
+            this.Controls.Add(this.LedPwmCtrl);
+            this.Controls.Add(this.Led_PWM);
             this.Controls.Add(this.InfoBox);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.ReadADC);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbFlashType);
+            this.Controls.Add(this.btFlashId);
             this.Controls.Add(this.tbHumidity);
             this.Controls.Add(this.tbTemperature);
             this.Controls.Add(this.btnReadHum);
@@ -168,6 +215,7 @@
             this.Controls.Add(this.btnRefresh);
             this.Name = "PcSerialTool";
             this.Text = "SerialTool";
+            ((System.ComponentModel.ISupportInitialize)(this.Led_PWM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,11 +230,15 @@
         private System.Windows.Forms.Button btnReadHum;
         private System.Windows.Forms.TextBox tbTemperature;
         private System.Windows.Forms.TextBox tbHumidity;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btFlashId;
+        private System.Windows.Forms.TextBox tbFlashType;
         private System.Windows.Forms.Button ReadADC;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox InfoBox;
+        private System.Windows.Forms.TrackBar Led_PWM;
+        private System.Windows.Forms.CheckBox LedPwmCtrl;
+        private System.Windows.Forms.Button LedPwmRead;
+        private System.Windows.Forms.TextBox tbLedPwm;
     }
 }
 

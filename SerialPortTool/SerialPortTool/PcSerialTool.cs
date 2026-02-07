@@ -81,7 +81,7 @@ namespace SerialPortTool
 
             byte[] txData = SerialProtocol.DataRead(1);
             result = ProcessCommand(txData, txData.Length, 19);
-            tbTemperature.Text = SerialProtocol.FormatHexRows(RxBuffer, 16);
+            tbTemperature.Text = SerialProtocol.FormatHexRows(RespBuffer, 13, 16);
         }
 
         private void btnReadHum_Click(object sender, EventArgs e)
@@ -94,12 +94,15 @@ namespace SerialPortTool
 
         private void tbTemperature_TextChanged(object sender, EventArgs e)
         {
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btFlashId_Click(object sender, EventArgs e)
         {
+            bool result = false;
 
+            byte[] txData = SerialProtocol.DataRead(3);
+            result = ProcessCommand(txData, txData.Length, 8);
+            tbFlashType.Text = SerialProtocol.FormatHexRows(RespBuffer, 2, 16);
         }
 
         private void tbHumidity_TextChanged(object sender, EventArgs e)
@@ -133,6 +136,26 @@ namespace SerialPortTool
         }
 
         private void InfoBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Led_PWM_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LedPwmCtrl_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LedPwmRead_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbLedPwm_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -44,10 +44,10 @@ namespace SerialPortTool
             buffer[buffer.Length - 1] = 0x27;
         }
 
-        public static string FormatHexRows(byte[] data, int perLine = 16)
+        public static string FormatHexRows(byte[] data, int length, int perLine = 16)
         {
             var sb = new StringBuilder();
-            for (int i = 0; i < data.Length; i++)
+            for (int i = 0; i < length; i++)
             {
                 if ( (i % perLine == 0) && (i != 0) )
                 {
@@ -61,7 +61,7 @@ namespace SerialPortTool
         public static bool GetDataField(byte[] inBuffer, byte[] dataBuffer, int length)
         {
             bool retval = false;
-            Array.Reverse(inBuffer, 0, length);
+            //Array.Reverse(inBuffer, 0, length);
             // Check the response integrity
             // Byte0 and Byte3 - 0xBE
             // Byte1 and Byte2 - response length
