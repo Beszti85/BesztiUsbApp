@@ -157,6 +157,7 @@
             // Led_PWM
             // 
             this.Led_PWM.Location = new System.Drawing.Point(362, 226);
+            this.Led_PWM.Maximum = 100;
             this.Led_PWM.Name = "Led_PWM";
             this.Led_PWM.Size = new System.Drawing.Size(104, 45);
             this.Led_PWM.TabIndex = 13;

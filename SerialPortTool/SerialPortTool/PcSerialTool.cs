@@ -17,6 +17,7 @@ namespace SerialPortTool
         public SerialPort serialPort;
         public byte[] RxBuffer = new byte[256];
         public byte[] RespBuffer = new byte[256];
+        public bool LedCtrlEnable = false;
 
         public PcSerialTool()
         {
@@ -147,7 +148,7 @@ namespace SerialPortTool
 
         private void LedPwmCtrl_CheckedChanged(object sender, EventArgs e)
         {
-
+            LedCtrlEnable = LedPwmCtrl.Checked;
         }
 
         private void LedPwmRead_Click(object sender, EventArgs e)
