@@ -16,6 +16,7 @@ namespace SerialPortTool
     {
         public SerialPort serialPort;
         public byte[] RxBuffer = new byte[256];
+        public byte[] TxBuffer = new byte[256];
         public byte[] RespBuffer = new byte[256];
         public bool LedCtrlEnable = false;
 
@@ -143,7 +144,10 @@ namespace SerialPortTool
 
         private void Led_PWM_Scroll(object sender, EventArgs e)
         {
+            if (LedCtrlEnable == true)
+            {
 
+            }
         }
 
         private void LedPwmCtrl_CheckedChanged(object sender, EventArgs e)
