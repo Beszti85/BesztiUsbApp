@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
+using System.Net.Cache;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,6 +32,17 @@ namespace SerialPortTool
             request[5] = readId;
             byte[] crcdata = {1, readId};
             request[6] = CalcCrc8(crcdata, 0, 2);
+
+            return request;
+        }
+
+        public static byte[] ActionCmd(byte[] reqAction, byte requestLength)
+        {
+            byte[] request = new byte[requestLength + 6];
+            AddHeaderAndFooter(request, (byte)(requestLength));
+            request[4] = 3;
+            Array.Copy(reqAction, 0, request, 5, requestLength);
+            request[6 + requestLength] = 0;
 
             return request;
         }
