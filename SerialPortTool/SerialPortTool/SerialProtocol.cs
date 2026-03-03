@@ -36,7 +36,18 @@ namespace SerialPortTool
             return request;
         }
 
-        public static byte[] ActionCmd(byte[] reqAction, byte requestLength)
+        public static byte[] ActionCmd(byte[] reqAction, byte actCmd)
+        {
+            byte[] request = new byte[8];
+            AddHeaderAndFooter(request, 2);
+            request[4] = 3;
+            byte[] crcdata = { 3, actCmd };
+            request[6] = CalcCrc8(crcdata, 0, 2);
+
+            return request;
+        }
+
+        public static byte[] ActionCmdWithData(byte[] reqAction, byte requestLength)
         {
             byte[] request = new byte[requestLength + 6];
             AddHeaderAndFooter(request, (byte)(requestLength));
