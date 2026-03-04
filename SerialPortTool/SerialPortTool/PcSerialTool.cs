@@ -164,5 +164,10 @@ namespace SerialPortTool
         {
 
         }
+
+        private void CbCmdSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

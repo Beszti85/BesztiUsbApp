@@ -44,6 +44,8 @@
             this.LedPwmCtrl = new System.Windows.Forms.CheckBox();
             this.LedPwmRead = new System.Windows.Forms.Button();
             this.tbLedPwm = new System.Windows.Forms.TextBox();
+            this.CbCmdSelect = new System.Windows.Forms.ComboBox();
+            this.BtnExeCommand = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Led_PWM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,11 +195,34 @@
             this.tbLedPwm.TabIndex = 16;
             this.tbLedPwm.TextChanged += new System.EventHandler(this.tbLedPwm_TextChanged);
             // 
+            // CbCmdSelect
+            // 
+            this.CbCmdSelect.FormattingEnabled = true;
+            this.CbCmdSelect.Items.AddRange(new object[] {
+            "FLASH_ERASE",
+            "DS1307_START"});
+            this.CbCmdSelect.Location = new System.Drawing.Point(129, 267);
+            this.CbCmdSelect.Name = "CbCmdSelect";
+            this.CbCmdSelect.Size = new System.Drawing.Size(121, 21);
+            this.CbCmdSelect.TabIndex = 17;
+            this.CbCmdSelect.SelectedIndexChanged += new System.EventHandler(this.CbCmdSelect_SelectedIndexChanged);
+            // 
+            // BtnExeCommand
+            // 
+            this.BtnExeCommand.Location = new System.Drawing.Point(27, 267);
+            this.BtnExeCommand.Name = "BtnExeCommand";
+            this.BtnExeCommand.Size = new System.Drawing.Size(75, 23);
+            this.BtnExeCommand.TabIndex = 18;
+            this.BtnExeCommand.Text = "ExeCmd";
+            this.BtnExeCommand.UseVisualStyleBackColor = true;
+            // 
             // PcSerialTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnExeCommand);
+            this.Controls.Add(this.CbCmdSelect);
             this.Controls.Add(this.tbLedPwm);
             this.Controls.Add(this.LedPwmRead);
             this.Controls.Add(this.LedPwmCtrl);
@@ -240,6 +265,8 @@
         private System.Windows.Forms.CheckBox LedPwmCtrl;
         private System.Windows.Forms.Button LedPwmRead;
         private System.Windows.Forms.TextBox tbLedPwm;
+        private System.Windows.Forms.ComboBox CbCmdSelect;
+        private System.Windows.Forms.Button BtnExeCommand;
     }
 }
 
