@@ -146,7 +146,9 @@ namespace SerialPortTool
         {
             if (LedCtrlEnable == true)
             {
-
+                bool result = false;
+                byte[] txData = SerialProtocol.ActionCmd(0);
+                result = ProcessCommand(txData, txData.Length, 8);
             }
         }
 

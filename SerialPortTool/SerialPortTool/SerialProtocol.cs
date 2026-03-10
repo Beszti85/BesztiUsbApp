@@ -36,7 +36,7 @@ namespace SerialPortTool
             return request;
         }
 
-        public static byte[] ActionCmd(byte[] reqAction, byte actCmd)
+        public static byte[] ActionCmd(byte actCmd)
         {
             byte[] request = new byte[8];
             AddHeaderAndFooter(request, 2);
