@@ -159,7 +159,11 @@ namespace SerialPortTool
 
         private void LedPwmRead_Click(object sender, EventArgs e)
         {
+            bool result = false;
 
+            byte[] txData = SerialProtocol.DataRead(4);
+            result = ProcessCommand(txData, txData.Length, 11);
+            tbLedPwm.Text = SerialProtocol.FormatHexRows(RespBuffer, 5, 16);
         }
 
         private void tbLedPwm_TextChanged(object sender, EventArgs e)
