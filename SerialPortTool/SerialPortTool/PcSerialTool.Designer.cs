@@ -200,7 +200,8 @@
             this.CbCmdSelect.FormattingEnabled = true;
             this.CbCmdSelect.Items.AddRange(new object[] {
             "FLASH_ERASE",
-            "DS1307_START"});
+            "DS1307_START",
+            "LED_TOGGLE"});
             this.CbCmdSelect.Location = new System.Drawing.Point(129, 267);
             this.CbCmdSelect.Name = "CbCmdSelect";
             this.CbCmdSelect.Size = new System.Drawing.Size(121, 21);
@@ -215,6 +216,7 @@
             this.BtnExeCommand.TabIndex = 18;
             this.BtnExeCommand.Text = "ExeCmd";
             this.BtnExeCommand.UseVisualStyleBackColor = true;
+            this.BtnExeCommand.Click += new System.EventHandler(this.BtnExeCommand_Click);
             // 
             // PcSerialTool
             // 

@@ -19,6 +19,14 @@ namespace SerialPortTool
         public byte[] TxBuffer = new byte[256];
         public byte[] RespBuffer = new byte[256];
         public bool LedCtrlEnable = false;
+        public uint CmdCtrlSelect = 0;
+
+        public new Dictionary<string, uint> ActCmdCodes = new Dictionary<string, uint>
+        {
+            { "FLASH_ERASE",  0 },
+            { "DS1307_START", 1 },
+            { "LED_TOGGLE",   2 }
+        };
 
         public PcSerialTool()
         {
@@ -173,7 +181,14 @@ namespace SerialPortTool
 
         private void CbCmdSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var selectedValue = CbCmdSelect.SelectedItem.ToString();
+            CmdCtrlSelect = ActCmdCodes[selectedValue];
+        }
 
+        private void BtnExeCommand_Click(object sender, EventArgs e)
+        {
+            byte[] txData = SerialProtocol.ActionCmd((byte)CmdCtrlSelect);
+            ProcessCommand(txData, txData.Length, 8);
         }
     }
 }
