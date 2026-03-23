@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CmdHandler.cs">
+    <Compile Include="CmdProtocol.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PcSerialTool.cs">

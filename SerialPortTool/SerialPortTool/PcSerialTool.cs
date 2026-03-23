@@ -21,11 +21,14 @@ namespace SerialPortTool
         public bool LedCtrlEnable = false;
         public uint CmdCtrlSelect = 0;
 
-        public new Dictionary<string, uint> ActCmdCodes = new Dictionary<string, uint>
+        private readonly Dictionary<string, uint> ActCmdCodes = new Dictionary<string, uint>
         {
-            { "FLASH_ERASE",  0 },
-            { "DS1307_START", 1 },
-            { "LED_TOGGLE",   2 }
+            { "FLASH_READ",   1 },
+            { "FLASH_WRITE",  2 },
+            { "FLASH_ERASE",  3 },
+            { "DS1307_START", 4 },
+            { "LED_TOGGLE",   5 },
+            { "LED_PWM_CTRL", 6 },
         };
 
         public PcSerialTool()
@@ -90,7 +93,7 @@ namespace SerialPortTool
             bool result = false;
 
             byte[] txData = SerialProtocol.DataRead(1);
-            result = ProcessCommand(txData, txData.Length, 19);
+            result = ProcessCommandAndRead(txData, txData.Length, 19);
             tbTemperature.Text = SerialProtocol.FormatHexRows(RespBuffer, 13, 16);
         }
 
@@ -111,7 +114,7 @@ namespace SerialPortTool
             bool result = false;
 
             byte[] txData = SerialProtocol.DataRead(3);
-            result = ProcessCommand(txData, txData.Length, 8);
+            result = ProcessCommandAndRead(txData, txData.Length, 8);
             tbFlashType.Text = SerialProtocol.FormatHexRows(RespBuffer, 2, 16);
         }
 
@@ -156,7 +159,7 @@ namespace SerialPortTool
             {
                 bool result = false;
                 byte[] txData = SerialProtocol.ActionCmd(0);
-                result = ProcessCommand(txData, txData.Length, 8);
+                result = ProcessCommandAndRead(txData, txData.Length, 8);
             }
         }
 
@@ -170,7 +173,7 @@ namespace SerialPortTool
             bool result = false;
 
             byte[] txData = SerialProtocol.DataRead(4);
-            result = ProcessCommand(txData, txData.Length, 11);
+            result = ProcessCommandAndRead(txData, txData.Length, 11);
             tbLedPwm.Text = SerialProtocol.FormatHexRows(RespBuffer, 5, 16);
         }
 
@@ -188,7 +191,7 @@ namespace SerialPortTool
         private void BtnExeCommand_Click(object sender, EventArgs e)
         {
             byte[] txData = SerialProtocol.ActionCmd((byte)CmdCtrlSelect);
-            ProcessCommand(txData, txData.Length, 8);
+            ProcessCommand(txData, txData.Length);
         }
     }
 }
