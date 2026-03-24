@@ -41,6 +41,7 @@ namespace SerialPortTool
             byte[] request = new byte[8];
             AddHeaderAndFooter(request, 2);
             request[4] = 3;
+            request[5] = (byte)actCmd;
             byte[] crcdata = { 3, actCmd };
             request[6] = CalcCrc8(crcdata, 0, 2);
 
