@@ -158,7 +158,8 @@ namespace SerialPortTool
             if (LedCtrlEnable == true)
             {
                 bool result = false;
-                byte[] txData = SerialProtocol.ActionCmd(0);
+                byte[] cmdData = { (byte)ActCmdCodes["LED_PWM_CTRL"], (byte)Led_PWM.Value };
+                byte[] txData = SerialProtocol.ActionCmdWithData( cmdData, 2 );
                 result = ProcessCommandAndRead(txData, txData.Length, 8);
             }
         }

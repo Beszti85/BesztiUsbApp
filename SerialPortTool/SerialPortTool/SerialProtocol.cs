@@ -50,11 +50,13 @@ namespace SerialPortTool
 
         public static byte[] ActionCmdWithData(byte[] reqAction, byte requestLength)
         {
-            byte[] request = new byte[requestLength + 6];
+            byte[] request = new byte[requestLength + 7];
             AddHeaderAndFooter(request, (byte)(requestLength));
             request[4] = 3;
             Array.Copy(reqAction, 0, request, 5, requestLength);
-            request[6 + requestLength] = 0;
+            byte[] crcData = new byte[requestLength + 1];
+            Array.Copy(request, 4, crcData, 0, crcData.Length);
+            request[5 + requestLength] = CalcCrc8(crcData, 0, (byte)crcData.Length);
 
             return request;
         }
