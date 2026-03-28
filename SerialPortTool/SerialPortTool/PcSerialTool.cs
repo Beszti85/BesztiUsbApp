@@ -20,6 +20,8 @@ namespace SerialPortTool
         public byte[] RespBuffer = new byte[256];
         public bool LedCtrlEnable = false;
         public uint CmdCtrlSelect = 0;
+        private readonly Timer TrackBarDebounceTimer;
+        private byte TbLedPwm_Value = 0;
 
         private readonly Dictionary<string, uint> ActCmdCodes = new Dictionary<string, uint>
         {
@@ -34,6 +36,8 @@ namespace SerialPortTool
         public PcSerialTool()
         {
             InitializeComponent();
+            TrackBarDebounceTimer = new Timer() { Interval = 300 };
+            TrackBarDebounceTimer.Tick += TbLedPwm_DebounceTimerTick;
             serialPort = new SerialPort();
             RefreshComPorts();
         }
@@ -155,13 +159,6 @@ namespace SerialPortTool
 
         private void Led_PWM_Scroll(object sender, EventArgs e)
         {
-            if (LedCtrlEnable == true)
-            {
-                bool result = false;
-                byte[] cmdData = { (byte)ActCmdCodes["LED_PWM_CTRL"], (byte)Led_PWM.Value };
-                byte[] txData = SerialProtocol.ActionCmdWithData( cmdData, 2 );
-                result = ProcessCommandAndRead(txData, txData.Length, 8);
-            }
         }
 
         private void LedPwmCtrl_CheckedChanged(object sender, EventArgs e)
@@ -193,6 +190,26 @@ namespace SerialPortTool
         {
             byte[] txData = SerialProtocol.ActionCmd((byte)CmdCtrlSelect);
             ProcessCommand(txData, txData.Length);
+        }
+
+        private void tbLed_PWM_ValueChanged(object sender, EventArgs e)
+        {
+            if (LedCtrlEnable == true)
+            {
+                TrackBarDebounceTimer.Stop();
+                TrackBarDebounceTimer.Start();
+            }
+        }
+        private void TbLedPwm_DebounceTimerTick(object sender, EventArgs e)
+        {
+            TrackBarDebounceTimer.Stop();
+
+            if (LedCtrlEnable == true)
+            {
+                byte[] cmdData = { (byte)ActCmdCodes["LED_PWM_CTRL"], (byte)Led_PWM.Value };
+                byte[] txData = SerialProtocol.ActionCmdWithData(cmdData, 2);
+                ProcessCommand(txData, txData.Length);
+            }
         }
     }
 }

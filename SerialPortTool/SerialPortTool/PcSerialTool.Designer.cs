@@ -163,7 +163,7 @@
             this.Led_PWM.Name = "Led_PWM";
             this.Led_PWM.Size = new System.Drawing.Size(104, 45);
             this.Led_PWM.TabIndex = 13;
-            this.Led_PWM.Scroll += new System.EventHandler(this.Led_PWM_Scroll);
+            this.Led_PWM.ValueChanged += new System.EventHandler(this.tbLed_PWM_ValueChanged);
             // 
             // LedPwmCtrl
             // 
