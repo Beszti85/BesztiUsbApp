@@ -33,6 +33,17 @@ namespace SerialPortTool
             { "LED_PWM_CTRL", 6 },
         };
 
+        private readonly Dictionary<string, byte> ReadCodes = new Dictionary<string, byte>
+        {
+            { "BOARD_ID",    0 },
+            { "BME280_THP",  1 },
+            { "ADC_VOLTAGE", 2 },
+            { "FLASH_ID",    3 },
+            { "LED_PWM",     4 },
+            { "FLASH_READ",  5 },
+            { "DAC_VOLTAGE", 6 }
+        };
+
         public PcSerialTool()
         {
             InitializeComponent();
@@ -96,7 +107,7 @@ namespace SerialPortTool
         {
             bool result = false;
 
-            byte[] txData = SerialProtocol.DataRead(1);
+            byte[] txData = SerialProtocol.DataRead(ReadCodes["BME280_THP"]);
             result = ProcessCommandAndRead(txData, txData.Length, 19);
             tbTemperature.Text = SerialProtocol.FormatHexRows(RespBuffer, 13, 16);
         }
@@ -117,7 +128,7 @@ namespace SerialPortTool
         {
             bool result = false;
 
-            byte[] txData = SerialProtocol.DataRead(3);
+            byte[] txData = SerialProtocol.DataRead(ReadCodes["FLASH_ID"]);
             result = ProcessCommandAndRead(txData, txData.Length, 8);
             tbFlashType.Text = SerialProtocol.FormatHexRows(RespBuffer, 2, 16);
         }
@@ -170,7 +181,7 @@ namespace SerialPortTool
         {
             bool result = false;
 
-            byte[] txData = SerialProtocol.DataRead(4);
+            byte[] txData = SerialProtocol.DataRead(ReadCodes["LED_PWM"]);
             result = ProcessCommandAndRead(txData, txData.Length, 11);
             tbLedPwm.Text = SerialProtocol.FormatHexRows(RespBuffer, 5, 16);
         }
