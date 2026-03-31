@@ -138,11 +138,6 @@ namespace SerialPortTool
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private async Task SendAndShowResponse(byte[] payload, TextBox target)
         {
             if (serialPort.IsOpen == false)
@@ -221,6 +216,15 @@ namespace SerialPortTool
                 byte[] txData = SerialProtocol.ActionCmdWithData(cmdData, 2);
                 ProcessCommand(txData, txData.Length);
             }
+        }
+
+        private void BtReadADC_Click(object sender, EventArgs e)
+        {
+            bool result = false;
+
+            byte[] txData = SerialProtocol.DataRead(ReadCodes["ADC_VOLTAGE"]);
+            result = ProcessCommandAndRead(txData, txData.Length, 27);
+            TbAdcVoltages.Text = SerialProtocol.FormatHexRows(RespBuffer, 27, 16);
         }
     }
 }

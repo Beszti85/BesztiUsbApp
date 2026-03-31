@@ -38,7 +38,7 @@
             this.btFlashId = new System.Windows.Forms.Button();
             this.tbFlashType = new System.Windows.Forms.TextBox();
             this.ReadADC = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TbAdcVoltages = new System.Windows.Forms.TextBox();
             this.InfoBox = new System.Windows.Forms.TextBox();
             this.Led_PWM = new System.Windows.Forms.TrackBar();
             this.LedPwmCtrl = new System.Windows.Forms.CheckBox();
@@ -139,14 +139,14 @@
             this.ReadADC.TabIndex = 10;
             this.ReadADC.Text = "ReadADC";
             this.ReadADC.UseVisualStyleBackColor = true;
-            this.ReadADC.Click += new System.EventHandler(this.button2_Click);
+            this.ReadADC.Click += new System.EventHandler(this.BtReadADC_Click);
             // 
-            // textBox2
+            // TbAdcVoltages
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 197);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.TbAdcVoltages.Location = new System.Drawing.Point(129, 197);
+            this.TbAdcVoltages.Name = "TbAdcVoltages";
+            this.TbAdcVoltages.Size = new System.Drawing.Size(100, 20);
+            this.TbAdcVoltages.TabIndex = 11;
             // 
             // InfoBox
             // 
@@ -230,7 +230,7 @@
             this.Controls.Add(this.LedPwmCtrl);
             this.Controls.Add(this.Led_PWM);
             this.Controls.Add(this.InfoBox);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TbAdcVoltages);
             this.Controls.Add(this.ReadADC);
             this.Controls.Add(this.tbFlashType);
             this.Controls.Add(this.btFlashId);
@@ -261,7 +261,7 @@
         private System.Windows.Forms.Button btFlashId;
         private System.Windows.Forms.TextBox tbFlashType;
         private System.Windows.Forms.Button ReadADC;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TbAdcVoltages;
         private System.Windows.Forms.TextBox InfoBox;
         private System.Windows.Forms.TrackBar Led_PWM;
         private System.Windows.Forms.CheckBox LedPwmCtrl;
