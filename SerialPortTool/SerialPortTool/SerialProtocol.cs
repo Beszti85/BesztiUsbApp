@@ -97,14 +97,18 @@ namespace SerialPortTool
                 && (inBuffer[1]  == inBuffer[2])
                 && (inBuffer[4 + inBuffer[1] + 1] == 0x27) )
             {
-                // Save response length
-                ResponseLength = inBuffer[1];
-                // Check CRC
-                Array.Copy(inBuffer, 4, dataBuffer, 0, ResponseLength);
-
-                int calcCrc = CalcCrc8(dataBuffer, 0, inBuffer[1]);
+                // CRC buffer
+                byte[] crcData = new byte[inBuffer[1]];
+                Array.Copy(inBuffer, 4, crcData, 0, crcData.Length);
+                int calcCrc = CalcCrc8(crcData, 0, inBuffer[1]);
+                // Received CRC == calculated?
                 if ( inBuffer[4 + inBuffer[1]] == calcCrc )
                 {
+                    // CRC valid
+                    // Save response length
+                    ResponseLength = inBuffer[1] - 1;
+                    // Check CRC
+                    Array.Copy(inBuffer, 4, dataBuffer, 1, ResponseLength);
                     retval = true;
                 }
             }
