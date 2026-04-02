@@ -23,27 +23,6 @@ namespace SerialPortTool
         private readonly Timer TrackBarDebounceTimer;
         private byte TbLedPwm_Value = 0;
 
-        private readonly Dictionary<string, uint> ActCmdCodes = new Dictionary<string, uint>
-        {
-            { "FLASH_READ",   1 },
-            { "FLASH_WRITE",  2 },
-            { "FLASH_ERASE",  3 },
-            { "DS1307_START", 4 },
-            { "LED_TOGGLE",   5 },
-            { "LED_PWM_CTRL", 6 },
-        };
-
-        private readonly Dictionary<string, byte[]> ReadCodes = new Dictionary<string, byte[]>
-        {
-            { "BOARD_ID",    new byte[] { 0, 0  } },
-            { "BME280_THP",  new byte[] { 1, 12 } },
-            { "ADC_VOLTAGE", new byte[] { 2, 2  } },
-            { "FLASH_ID",    new byte[] { 3, 4  } },
-            { "LED_PWM",     new byte[] { 4, 4  } },
-            { "FLASH_READ",  new byte[] { 5, 4  } },
-            { "DAC_VOLTAGE", new byte[] { 6, 2  } }
-        };
-
         public PcSerialTool()
         {
             InitializeComponent();
@@ -109,7 +88,7 @@ namespace SerialPortTool
 
             byte[] txData = SerialProtocol.DataRead(ReadCodes["BME280_THP"][0]);
             result = ProcessCommandAndRead(txData, txData.Length, 19);
-            tbTemperature.Text = SerialProtocol.FormatHexRows(RespBuffer, 13, 16);
+            tbTemperature.Text = SerialProtocol.FormatHexRows(RespBuffer, ReadCodes["BME280_THP"][1], 16);
         }
 
         private void btnReadHum_Click(object sender, EventArgs e)
@@ -130,7 +109,7 @@ namespace SerialPortTool
 
             byte[] txData = SerialProtocol.DataRead(ReadCodes["FLASH_ID"][0]);
             result = ProcessCommandAndRead(txData, txData.Length, 8);
-            tbFlashType.Text = SerialProtocol.FormatHexRows(RespBuffer, 2, 16);
+            tbFlashType.Text = FlashTypes[RespBuffer[0]];
         }
 
         private void tbHumidity_TextChanged(object sender, EventArgs e)
@@ -178,7 +157,7 @@ namespace SerialPortTool
 
             byte[] txData = SerialProtocol.DataRead(ReadCodes["LED_PWM"][0]);
             result = ProcessCommandAndRead(txData, txData.Length, 11);
-            tbLedPwm.Text = SerialProtocol.FormatHexRows(RespBuffer, 4, 16);
+            tbLedPwm.Text = SerialProtocol.FormatHexRows(RespBuffer, ReadCodes["LED_PWM"][1], 16);
         }
 
         private void tbLedPwm_TextChanged(object sender, EventArgs e)
@@ -224,7 +203,7 @@ namespace SerialPortTool
 
             byte[] txData = SerialProtocol.DataRead(ReadCodes["ADC_VOLTAGE"][0]);
             result = ProcessCommandAndRead(txData, txData.Length, 27);
-            TbAdcVoltages.Text = SerialProtocol.FormatHexRows(RespBuffer, 26, 16);
+            TbAdcVoltages.Text = SerialProtocol.FormatHexRows(RespBuffer, ReadCodes["ADC_VOLTAGE"][1], 16);
         }
     }
 }
