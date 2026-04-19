@@ -157,7 +157,7 @@ namespace SerialPortTool
 
             byte[] txData = SerialProtocol.DataRead(ReadCodes["LED_PWM"][0]);
             result = ProcessCommandAndRead(txData, txData.Length, 11);
-            tbLedPwm.Text = SerialProtocol.FormatHexRows(RespBuffer, ReadCodes["LED_PWM"][1], 16);
+            tbLedPwm.Text = RespBuffer[0].ToString() + "%"; 
         }
 
         private void tbLedPwm_TextChanged(object sender, EventArgs e)
