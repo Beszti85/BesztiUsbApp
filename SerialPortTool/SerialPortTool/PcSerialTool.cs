@@ -184,6 +184,7 @@ namespace SerialPortTool
                 TrackBarDebounceTimer.Stop();
                 TrackBarDebounceTimer.Start();
             }
+            LbPwmCtrl.Text = Led_PWM.Value.ToString() + "%";
         }
         private void TbLedPwm_DebounceTimerTick(object sender, EventArgs e)
         {

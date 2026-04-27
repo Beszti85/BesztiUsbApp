@@ -46,6 +46,7 @@
             this.tbLedPwm = new System.Windows.Forms.TextBox();
             this.CbCmdSelect = new System.Windows.Forms.ComboBox();
             this.BtnExeCommand = new System.Windows.Forms.Button();
+            this.LbPwmCtrl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Led_PWM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,7 +162,7 @@
             this.Led_PWM.Location = new System.Drawing.Point(362, 226);
             this.Led_PWM.Maximum = 100;
             this.Led_PWM.Name = "Led_PWM";
-            this.Led_PWM.Size = new System.Drawing.Size(104, 45);
+            this.Led_PWM.Size = new System.Drawing.Size(122, 45);
             this.Led_PWM.TabIndex = 13;
             this.Led_PWM.ValueChanged += new System.EventHandler(this.tbLed_PWM_ValueChanged);
             // 
@@ -218,11 +219,21 @@
             this.BtnExeCommand.UseVisualStyleBackColor = true;
             this.BtnExeCommand.Click += new System.EventHandler(this.BtnExeCommand_Click);
             // 
+            // LbPwmCtrl
+            // 
+            this.LbPwmCtrl.AutoSize = true;
+            this.LbPwmCtrl.Location = new System.Drawing.Point(406, 258);
+            this.LbPwmCtrl.Name = "LbPwmCtrl";
+            this.LbPwmCtrl.Size = new System.Drawing.Size(21, 13);
+            this.LbPwmCtrl.TabIndex = 19;
+            this.LbPwmCtrl.Text = "0%";
+            // 
             // PcSerialTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LbPwmCtrl);
             this.Controls.Add(this.BtnExeCommand);
             this.Controls.Add(this.CbCmdSelect);
             this.Controls.Add(this.tbLedPwm);
@@ -269,6 +280,7 @@
         private System.Windows.Forms.TextBox tbLedPwm;
         private System.Windows.Forms.ComboBox CbCmdSelect;
         private System.Windows.Forms.Button BtnExeCommand;
+        private System.Windows.Forms.Label LbPwmCtrl;
     }
 }
 
