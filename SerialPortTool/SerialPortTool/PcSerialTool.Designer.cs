@@ -47,6 +47,9 @@
             this.CbCmdSelect = new System.Windows.Forms.ComboBox();
             this.BtnExeCommand = new System.Windows.Forms.Button();
             this.LbPwmCtrl = new System.Windows.Forms.Label();
+            this.NRF_REG_READ = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Led_PWM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,11 +231,38 @@
             this.LbPwmCtrl.TabIndex = 19;
             this.LbPwmCtrl.Text = "0%";
             // 
+            // NRF_REG_READ
+            // 
+            this.NRF_REG_READ.Location = new System.Drawing.Point(27, 297);
+            this.NRF_REG_READ.Name = "NRF_REG_READ";
+            this.NRF_REG_READ.Size = new System.Drawing.Size(75, 23);
+            this.NRF_REG_READ.TabIndex = 20;
+            this.NRF_REG_READ.Text = "NRF_READ_REG";
+            this.NRF_REG_READ.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(129, 298);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(271, 297);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 22;
+            // 
             // PcSerialTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.NRF_REG_READ);
             this.Controls.Add(this.LbPwmCtrl);
             this.Controls.Add(this.BtnExeCommand);
             this.Controls.Add(this.CbCmdSelect);
@@ -281,6 +311,9 @@
         private System.Windows.Forms.ComboBox CbCmdSelect;
         private System.Windows.Forms.Button BtnExeCommand;
         private System.Windows.Forms.Label LbPwmCtrl;
+        private System.Windows.Forms.Button NRF_REG_READ;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
