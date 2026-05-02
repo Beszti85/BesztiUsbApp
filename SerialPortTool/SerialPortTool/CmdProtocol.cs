@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SerialPortTool
 {
@@ -40,6 +41,27 @@ namespace SerialPortTool
             { 2, "W25Q32JV_IQ" },
             { 3, "W25Q32JV_IM" },
             { 255, "NO FLASH"  },
+        };
+        // NRF24L01 register ID dictionary
+        private readonly Dictionary<string, byte> NRF24Registers = new Dictionary<string, byte>
+        {
+            { "CONFIG",    0 }, 
+            { "EN_AA",     1 },
+            { "EN_RXADDR", 2 },
+            { "SETUP_AW",  3 },
+            { "SETUP_RETR", 4 },
+            { "RF_CH", 5 },
+            { "RF_SETUP", 6 },
+            { "STATUS", 7 },
+            { "OBSERVE_TX", 8 },
+            { "RPD", 9 },
+            { "RX_PW_P0", 10 },
+            { "RX_PW_P1", 11 },
+            { "RX_PW_P2", 12 },
+            { "RX_PW_P3", 13 },
+            { "RX_PW_P5", 14 },
+            { "FIFO_STATUS", 15 },
+            { "DYNPD", 16 }
         };
         public bool ProcessCommandAndRead(byte[] txBuffer, int txLength, int rxLength)
         {

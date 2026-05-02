@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO.Ports;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace SerialPortTool
@@ -20,6 +21,8 @@ namespace SerialPortTool
         public byte[] RespBuffer = new byte[256];
         public bool LedCtrlEnable = false;
         public uint CmdCtrlSelect = 0;
+        public byte Nrf24RegReadSelect = 0;
+        public byte Nrf24RegWriteSelect = 0;
         private readonly Timer TrackBarDebounceTimer;
         private byte TbLedPwm_Value = 0;
 
@@ -117,26 +120,6 @@ namespace SerialPortTool
 
         }
 
-        private async Task SendAndShowResponse(byte[] payload, TextBox target)
-        {
-            if (serialPort.IsOpen == false)
-            {
-                MessageBox.Show("SerialPort is closed!", "Port Closed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                try
-                {
-                    // Clear stale incoming data before new request
-                    serialPort.DiscardInBuffer();
-                }
-                finally
-                {
-                    MessageBox.Show("Error!");
-                }
-            }
-        }
-
         private void InfoBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -205,6 +188,30 @@ namespace SerialPortTool
             byte[] txData = SerialProtocol.DataRead(ReadCodes["ADC_VOLTAGE"][0]);
             result = ProcessCommandAndRead(txData, txData.Length, 27);
             TbAdcVoltages.Text = SerialProtocol.FormatHexRows(RespBuffer, ReadCodes["ADC_VOLTAGE"][1], 16);
+        }
+
+        private void BtNrfRegRead_Click(object sender, EventArgs e)
+        {
+            byte[] cmdData = { Nrf24RegReadSelect };
+            byte[] txData = SerialProtocol.ActionCmdWithData(cmdData, 2);
+            ProcessCommand(txData, txData.Length);
+        }
+
+        private void BtNrfRegWrite_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbNrf24RegRead_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedValue = CbNrf24RegRead.SelectedItem.ToString();
+            Nrf24RegReadSelect = NRF24Registers[selectedValue];
+        }
+
+        private void CbNrf24RegWrite_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedValue = CbNrf24RegWrite.SelectedItem.ToString();
+            Nrf24RegWriteSelect = NRF24Registers[selectedValue];
         }
     }
 }

@@ -47,9 +47,12 @@
             this.CbCmdSelect = new System.Windows.Forms.ComboBox();
             this.BtnExeCommand = new System.Windows.Forms.Button();
             this.LbPwmCtrl = new System.Windows.Forms.Label();
-            this.NRF_REG_READ = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BtNrfRegRead = new System.Windows.Forms.Button();
+            this.CbNrf24RegRead = new System.Windows.Forms.ComboBox();
+            this.TbNrf24RegRead = new System.Windows.Forms.TextBox();
+            this.BtNrfRegWrite = new System.Windows.Forms.Button();
+            this.CbNrf24RegWrite = new System.Windows.Forms.ComboBox();
+            this.TbNrf24RegWrite = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Led_PWM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -231,38 +234,105 @@
             this.LbPwmCtrl.TabIndex = 19;
             this.LbPwmCtrl.Text = "0%";
             // 
-            // NRF_REG_READ
+            // BtNrfRegRead
             // 
-            this.NRF_REG_READ.Location = new System.Drawing.Point(27, 297);
-            this.NRF_REG_READ.Name = "NRF_REG_READ";
-            this.NRF_REG_READ.Size = new System.Drawing.Size(75, 23);
-            this.NRF_REG_READ.TabIndex = 20;
-            this.NRF_REG_READ.Text = "NRF_READ_REG";
-            this.NRF_REG_READ.UseVisualStyleBackColor = true;
+            this.BtNrfRegRead.Location = new System.Drawing.Point(27, 297);
+            this.BtNrfRegRead.Name = "BtNrfRegRead";
+            this.BtNrfRegRead.Size = new System.Drawing.Size(85, 23);
+            this.BtNrfRegRead.TabIndex = 20;
+            this.BtNrfRegRead.Text = "NRF_READ";
+            this.BtNrfRegRead.UseVisualStyleBackColor = true;
+            this.BtNrfRegRead.Click += new System.EventHandler(this.BtNrfRegRead_Click);
             // 
-            // comboBox1
+            // CbNrf24RegRead
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(129, 298);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 21;
+            this.CbNrf24RegRead.FormattingEnabled = true;
+            this.CbNrf24RegRead.Items.AddRange(new object[] {
+            "CONFIG",
+            "EN_AA",
+            "EN_RXADDR",
+            "SETUP_AW",
+            "SETUP_RETR",
+            "RF_CH",
+            "RF_SETUP",
+            "STATUS",
+            "OBSERVE_TX",
+            "RPD",
+            "RX_PW_P0",
+            "RX_PW_P1",
+            "RX_PW_P2",
+            "RX_PW_P3",
+            "RX_PW_P5",
+            "FIFO_STATUS",
+            "DYNPD"});
+            this.CbNrf24RegRead.Location = new System.Drawing.Point(129, 298);
+            this.CbNrf24RegRead.Name = "CbNrf24RegRead";
+            this.CbNrf24RegRead.Size = new System.Drawing.Size(121, 21);
+            this.CbNrf24RegRead.TabIndex = 21;
+            this.CbNrf24RegRead.SelectedIndexChanged += new System.EventHandler(this.CbNrf24RegRead_SelectedIndexChanged);
             // 
-            // textBox1
+            // TbNrf24RegRead
             // 
-            this.textBox1.Location = new System.Drawing.Point(271, 297);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 22;
+            this.TbNrf24RegRead.Location = new System.Drawing.Point(271, 297);
+            this.TbNrf24RegRead.Name = "TbNrf24RegRead";
+            this.TbNrf24RegRead.Size = new System.Drawing.Size(100, 20);
+            this.TbNrf24RegRead.TabIndex = 22;
+            // 
+            // BtNrfRegWrite
+            // 
+            this.BtNrfRegWrite.Location = new System.Drawing.Point(27, 327);
+            this.BtNrfRegWrite.Name = "BtNrfRegWrite";
+            this.BtNrfRegWrite.Size = new System.Drawing.Size(85, 23);
+            this.BtNrfRegWrite.TabIndex = 23;
+            this.BtNrfRegWrite.Text = "NRF_WRITE";
+            this.BtNrfRegWrite.UseVisualStyleBackColor = true;
+            this.BtNrfRegWrite.Click += new System.EventHandler(this.BtNrfRegWrite_Click);
+            // 
+            // CbNrf24RegWrite
+            // 
+            this.CbNrf24RegWrite.FormattingEnabled = true;
+            this.CbNrf24RegWrite.Items.AddRange(new object[] {
+            "CONFIG",
+            "EN_AA",
+            "EN_RXADDR",
+            "SETUP_AW",
+            "SETUP_RETR",
+            "RF_CH",
+            "RF_SETUP",
+            "STATUS",
+            "OBSERVE_TX",
+            "RPD",
+            "RX_PW_P0",
+            "RX_PW_P1",
+            "RX_PW_P2",
+            "RX_PW_P3",
+            "RX_PW_P5",
+            "FIFO_STATUS",
+            "DYNPD"});
+            this.CbNrf24RegWrite.Location = new System.Drawing.Point(129, 326);
+            this.CbNrf24RegWrite.Name = "CbNrf24RegWrite";
+            this.CbNrf24RegWrite.Size = new System.Drawing.Size(121, 21);
+            this.CbNrf24RegWrite.TabIndex = 24;
+            this.CbNrf24RegWrite.SelectedIndexChanged += new System.EventHandler(this.CbNrf24RegWrite_SelectedIndexChanged);
+            // 
+            // TbNrf24RegWrite
+            // 
+            this.TbNrf24RegWrite.Location = new System.Drawing.Point(271, 326);
+            this.TbNrf24RegWrite.Name = "TbNrf24RegWrite";
+            this.TbNrf24RegWrite.Size = new System.Drawing.Size(100, 20);
+            this.TbNrf24RegWrite.TabIndex = 25;
             // 
             // PcSerialTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.NRF_REG_READ);
+            this.Controls.Add(this.TbNrf24RegWrite);
+            this.Controls.Add(this.CbNrf24RegWrite);
+            this.Controls.Add(this.BtNrfRegWrite);
+            this.Controls.Add(this.TbNrf24RegRead);
+            this.Controls.Add(this.CbNrf24RegRead);
+            this.Controls.Add(this.BtNrfRegRead);
             this.Controls.Add(this.LbPwmCtrl);
             this.Controls.Add(this.BtnExeCommand);
             this.Controls.Add(this.CbCmdSelect);
@@ -311,9 +381,12 @@
         private System.Windows.Forms.ComboBox CbCmdSelect;
         private System.Windows.Forms.Button BtnExeCommand;
         private System.Windows.Forms.Label LbPwmCtrl;
-        private System.Windows.Forms.Button NRF_REG_READ;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BtNrfRegRead;
+        private System.Windows.Forms.ComboBox CbNrf24RegRead;
+        private System.Windows.Forms.TextBox TbNrf24RegRead;
+        private System.Windows.Forms.Button BtNrfRegWrite;
+        private System.Windows.Forms.ComboBox CbNrf24RegWrite;
+        private System.Windows.Forms.TextBox TbNrf24RegWrite;
     }
 }
 
