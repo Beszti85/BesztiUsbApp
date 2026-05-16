@@ -68,10 +68,10 @@ namespace SerialPortTool
                     serialPort.DiscardInBuffer();
                     serialPort.Write(data, 0, data.Length);
                     MessageBox.Show("Data sent successfully!");
-                    // Read Board ID
-                    //byte[] data2 = SerialProtocol.DataRead(0);
-                    //serialPort.Write(data2, 0, data2.Length);
-                    //InfoBox.Text = serialPort.ReadLine();
+                    byte[] txData = SerialProtocol.DataRead(ReadCodes["BOARD_ID"][0]);
+                    ProcessCommandAndRead(txData, txData.Length, ReadCodes["BOARD_ID"][1] + 7);
+                    //InfoBox.Text = SerialProtocol.FormatHexRows(RespBuffer, ReadCodes["BOARD_ID"][1], 16);
+                    InfoBox.Text = Encoding.ASCII.GetString(RespBuffer, 0, ReadCodes["BOARD_ID"][1]).TrimEnd('\0');
                 }
                 else
                 {
