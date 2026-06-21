@@ -90,8 +90,17 @@ namespace SerialPortTool
             bool result = false;
 
             byte[] txData = SerialProtocol.DataRead(ReadCodes["BME280_THP"][0]);
-            result = ProcessCommandAndRead(txData, txData.Length, 19);
-            tbTemperature.Text = SerialProtocol.FormatHexRows(RespBuffer, ReadCodes["BME280_THP"][1], 16);
+            result = ProcessCommandAndRead(txData, txData.Length, 31);
+            //tbTemperature.Text = SerialProtocol.FormatHexRows(RespBuffer, ReadCodes["BME280_THP"][1], 16);
+            byte[] b0 = new byte[8];
+            byte[] b1 = new byte[8];
+            byte[] b2 = new byte[8];
+
+            Array.Copy(RespBuffer, 0, b0, 0, 8);
+            Array.Copy(RespBuffer, 8, b1, 0, 8);
+            Array.Copy(RespBuffer, 16, b2, 0, 8);
+
+            tbTemperature.Text = BitConverter.ToDouble(b0, 0).ToString() + " °C, " + BitConverter.ToDouble(b1, 0).ToString() + " % " + BitConverter.ToDouble(b2, 0  ).ToString() + " hPa";
         }
 
         private void btnReadHum_Click(object sender, EventArgs e)

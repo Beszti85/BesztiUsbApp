@@ -26,7 +26,7 @@ namespace SerialPortTool
         private readonly Dictionary<string, byte[]> ReadCodes = new Dictionary<string, byte[]>
         {
             { "BOARD_ID",    new byte[] { 0, 22 } },
-            { "BME280_THP",  new byte[] { 1, 12 } },
+            { "BME280_THP",  new byte[] { 1, 24 } },
             { "ADC_VOLTAGE", new byte[] { 2, 20 } },
             { "FLASH_ID",    new byte[] { 3, 1  } },
             { "LED_PWM",     new byte[] { 4, 4  } },
