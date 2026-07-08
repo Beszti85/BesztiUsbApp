@@ -109,6 +109,7 @@ namespace SerialPortTool
                     ResponseLength = inBuffer[1] - 1;
                     // Check CRC
                     Array.Copy(inBuffer, 5, dataBuffer, 0, ResponseLength);
+                    AppLogger.Debug("Response bytes: " + FormatHexRows(dataBuffer, ResponseLength));
                     retval = true;
                 }
             }

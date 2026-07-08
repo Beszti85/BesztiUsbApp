@@ -68,9 +68,11 @@ namespace SerialPortTool
             bool result = false;
 
             serialPort.DiscardInBuffer();
+            AppLogger.Debug("Sending command: " + SerialProtocol.FormatHexRows(txBuffer, txLength));
             serialPort.Write(txBuffer, 0, txLength);
             while (serialPort.BytesToRead != rxLength) ;
             serialPort.Read(RxBuffer, 0, serialPort.BytesToRead);
+            AppLogger.Debug("Received data: " + SerialProtocol.FormatHexRows(RxBuffer, rxLength));
             result = SerialProtocol.GetDataField(RxBuffer, RespBuffer, rxLength);
 
             return result;

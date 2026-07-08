@@ -16,6 +16,9 @@ namespace SerialPortTool
         [STAThread]
         static void Main()
         {
+            // Set a fixed startup timestamp for the log filename
+            GlobalDiagnosticsContext.Set("startupTime", DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Catch unhandled UI thread exceptions

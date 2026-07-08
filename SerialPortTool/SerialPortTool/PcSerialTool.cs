@@ -66,6 +66,7 @@ namespace SerialPortTool
                     byte[] data = {0xBE, 2, 2, 0xBE, 0, 0, 0, 0x27};
                     serialPort.Open();
                     serialPort.DiscardInBuffer();
+                    AppLogger.Debug("Write data: " + BitConverter.ToString(data));
                     serialPort.Write(data, 0, data.Length);
                     MessageBox.Show("Data sent successfully!");
                     byte[] txData = SerialProtocol.DataRead(ReadCodes["BOARD_ID"][0]);
