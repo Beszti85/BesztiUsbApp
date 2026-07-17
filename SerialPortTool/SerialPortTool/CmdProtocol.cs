@@ -12,15 +12,18 @@ namespace SerialPortTool
         // Action command dictionary: command name and byte ID
         private readonly Dictionary<string, uint> ActCmdCodes = new Dictionary<string, uint>
         {
-            { "FLASH_READ",      1 },
-            { "FLASH_WRITE",     2 },
-            { "FLASH_ERASE",     3 },
-            { "DS1307_START",    4 },
-            { "LED_TOGGLE",      5 },
-            { "LED_PWM_CTRL",    6 },
-            { "DS1307_SQW",     17 },
-            { "NRF24_READ_1B",  21 },
-            { "NRF24_WRITE_1B", 22 },
+            { "FLASH_READ",        1 },
+            { "FLASH_WRITE",       2 },
+            { "FLASH_ERASE",       3 },
+            { "DS1307_START",      4 },
+            { "LED_TOGGLE",        5 },
+            { "LED_PWM_CTRL",      6 },
+            { "DS1307_SQW",       17 },
+            { "DS1307_SETACTIME", 18 },
+            { "DS3231_START",     19 },
+            { "DS3231_SETACTIME", 20 },
+            { "NRF24_READ_1B",    21 },
+            { "NRF24_WRITE_1B",   22 },
         };
         // Read command dictionary: command name and byte ID with response data length (without ID)
         private readonly Dictionary<string, byte[]> ReadCodes = new Dictionary<string, byte[]>

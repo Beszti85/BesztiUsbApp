@@ -208,6 +208,9 @@
             this.CbCmdSelect.Items.AddRange(new object[] {
             "FLASH_ERASE",
             "DS1307_START",
+            "DS1307_SETACTTIME",
+            "DS3231_START",
+            "DS3231_SETACTTIME",
             "LED_TOGGLE"});
             this.CbCmdSelect.Location = new System.Drawing.Point(129, 267);
             this.CbCmdSelect.Name = "CbCmdSelect";

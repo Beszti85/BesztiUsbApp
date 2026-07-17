@@ -166,8 +166,18 @@ namespace SerialPortTool
 
         private void BtnExeCommand_Click(object sender, EventArgs e)
         {
-            byte[] txData = SerialProtocol.ActionCmd((byte)CmdCtrlSelect);
-            ProcessCommand(txData, txData.Length);
+            if (CmdCtrlSelect == ActCmdCodes["DS3231_SETACTTIME"])
+            {
+                DateTime actTime = DateTime.Now;
+                byte[] cmdData = { (byte)ActCmdCodes["DS3231_SETACTTIME"], (byte)actTime.Year, (byte)actTime.Month, (byte)actTime.Day, (byte)actTime.Hour, (byte)actTime.Minute, (byte)actTime.Second };
+                byte[] txData = SerialProtocol.ActionCmdWithData(cmdData, (byte)cmdData.Length);
+                ProcessCommand(txData, txData.Length);
+            }
+            else
+            {
+                byte[] txData = SerialProtocol.ActionCmd((byte)CmdCtrlSelect);
+                ProcessCommand(txData, txData.Length);
+            }
         }
 
         private void tbLed_PWM_ValueChanged(object sender, EventArgs e)
