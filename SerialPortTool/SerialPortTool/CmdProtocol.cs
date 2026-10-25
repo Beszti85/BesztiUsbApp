@@ -73,12 +73,43 @@ namespace SerialPortTool
             serialPort.DiscardInBuffer();
             AppLogger.Debug("Sending command: " + SerialProtocol.FormatHexRows(txBuffer, txLength));
             serialPort.Write(txBuffer, 0, txLength);
-            while (serialPort.BytesToRead != rxLength) ;
-            serialPort.Read(RxBuffer, 0, serialPort.BytesToRead);
-            AppLogger.Debug("Received data: " + SerialProtocol.FormatHexRows(RxBuffer, rxLength));
-            result = SerialProtocol.GetDataField(RxBuffer, RespBuffer, rxLength);
+            // Response frame: 0xBE len len 0xBE | len bytes (data + CRC) | 0x27
+            // The length is only known after the 4-byte header has been received.
+            int received = 0;
+            try
+            {
+                ReadExactly(RxBuffer, ref received, 4);
+                if (RxBuffer[0] != 0xBE || RxBuffer[3] != 0xBE || RxBuffer[1] != RxBuffer[2])
+                {
+                    AppLogger.Debug("Invalid response header: " + SerialProtocol.FormatHexRows(RxBuffer, received));
+                    return false;
+                }
+                int frameLength = 4 + RxBuffer[1] + 2;
+                if (frameLength > RxBuffer.Length)
+                {
+                    AppLogger.Debug("Response too long: " + frameLength + " bytes");
+                    return false;
+                }
+                ReadExactly(RxBuffer, ref received, frameLength);
+            }
+            catch (TimeoutException)
+            {
+                AppLogger.Debug("Timeout: received " + received + " bytes");
+                return false;
+            }
+            AppLogger.Debug("Received data: " + SerialProtocol.FormatHexRows(RxBuffer, received));
+            result = SerialProtocol.GetDataField(RxBuffer, RespBuffer, received);
 
             return result;
+        }
+
+        // Reads from the port until 'count' bytes are in the buffer; throws TimeoutException on ReadTimeout
+        private void ReadExactly(byte[] buffer, ref int received, int count)
+        {
+            while (received < count)
+            {
+                received += serialPort.Read(buffer, received, count - received);
+            }
         }
 
         public void ProcessCommand(byte[] txBuffer, int txLength)
